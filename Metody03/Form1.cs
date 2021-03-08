@@ -20,12 +20,34 @@ namespace Metody03
         {
             return Math.Sqrt(Math.Pow(Math.Abs(x1 - x2), 2) + Math.Pow(Math.Abs(y1 - y2), 2));
         }
+        double mocnina(int a, int b)
+        {
+            double vysledek = 1;
+            if (b > 0)
+            {
+                for (int i = 0; i < b; i++)
+                {
+                    vysledek *= a;
+                }
+            }
+            else if (b < 0)
+            {
+                for (int i = 0; i > b; i--)
+                {
+                    vysledek /= a;
+                }
+            }
+            return vysledek;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             int x1 = Convert.ToInt32(textBox1.Text);
             int x2 = Convert.ToInt32(textBox3.Text);
             int y1 = Convert.ToInt32(textBox2.Text);
             int y2 = Convert.ToInt32(textBox4.Text);
+            int a = Convert.ToInt32(textBox5.Text);
+            int b = Convert.ToInt32(textBox6.Text);
+            label5.Text = mocnina(a,b).ToString();
             label3.Text = vzdalenost(x1, y1, x2, y2).ToString();
         }
     }
