@@ -47,6 +47,7 @@ namespace Metody03
             int y2 = Convert.ToInt32(textBox4.Text);
             int a = Convert.ToInt32(textBox5.Text);
             int b = Convert.ToInt32(textBox6.Text);
+            int ab;
             int c = 1;
             label5.Text = mocnina(a,b).ToString();
             label3.Text = vzdalenost(x1, y1, x2, y2).ToString();
